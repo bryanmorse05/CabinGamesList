@@ -58,6 +58,23 @@ public class MainActivity extends AppCompatActivity {
 
                     cabinGamesModel.setName(eventsList.get(i).getName());
                     cabinGamesModel.setOwner(eventsList.get(i).getOwner());
+                    cabinGamesModel.setPlayers((eventsList.get(i).getPlayers()));
+                    cabinGamesModel.setTime(eventsList.get(i).getTime());
+                    cabinGamesModel.setDescription(eventsList.get(i).getDescription());
+
+                    //Check to see if the URL is empty.  If it is, Picasso will cause the app to crash
+                    //because it does not like a null/empty field.  For whatever reason, I can't just
+                    //pass eventsList.get(i).getImageURL into the if statement, it must be stored in
+                    //a different variable.  By passing "none" at least it's not empty and Picasso
+                    //will use the default value in the RecyclerAdapter.
+                    String storedImageURL;
+                    storedImageURL = eventsList.get(i).getImageURL();
+                    if (storedImageURL == null || storedImageURL == "") {
+                        cabinGamesModel.setImageURL("none");
+                    }
+                    else {
+                        cabinGamesModel.setImageURL(eventsList.get(i).getImageURL());
+                    }
 
                     cabinGamesModelArrayList.add(cabinGamesModel);
 

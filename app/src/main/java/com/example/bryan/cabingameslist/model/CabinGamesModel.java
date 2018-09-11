@@ -11,6 +11,50 @@ public class CabinGamesModel {
     @SerializedName("owner")
     @Expose
     private String owner;
+    @SerializedName("players")
+    @Expose
+    private String players;
+    @SerializedName("time")
+    @Expose
+    private String time;
+    @SerializedName("description")
+    @Expose
+    private String description;
+    @SerializedName("imageURL")
+    @Expose
+    private String imageURL;
+
+    public String getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(String players) {
+        this.players = players;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
 
     public String getName() {
         return name;
@@ -28,3 +72,4 @@ public class CabinGamesModel {
         this.owner = owner;
     }
 }
+

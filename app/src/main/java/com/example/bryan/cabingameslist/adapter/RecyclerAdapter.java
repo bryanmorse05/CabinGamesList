@@ -5,10 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         nameDisplay.setText(cabinGamesModel.getName());
 
         TextView ownerDisplay = holder.ownerDisplay;
-        ownerDisplay.setText(cabinGamesModel.getOwner());
+        ownerDisplay.setText("Provided by " + cabinGamesModel.getOwner());
+
+        TextView playersDisplay = holder.playersDisplay;
+        playersDisplay.setText(cabinGamesModel.getPlayers() + " players");
+
+        TextView timeDisplay = holder.timeDisplay;
+        timeDisplay.setText(cabinGamesModel.getTime());
+
+        TextView descriptionDisplay = holder.descriptionDisplay;
+        descriptionDisplay.setText(cabinGamesModel.getDescription());
+
+      //Set the image using Picasso
+        if (cabinGamesModel.getImageURL() != null || cabinGamesModel.getImageURL() != "") {
+
+            Picasso.with(context)
+                    .load(cabinGamesModel.getImageURL())
+                    .error(R.drawable.ic_launcher_background)       //Handles 404, but not null
+                    .into(holder.imageDisplay);
+        }
+        else {
+            Picasso.with(context).load(R.drawable.ic_launcher_background).into(holder.imageDisplay);
+        }
 
     }
 
@@ -55,6 +78,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         public TextView nameDisplay;
         public TextView ownerDisplay;
+        public TextView playersDisplay;
+        public TextView timeDisplay;
+        public TextView descriptionDisplay;
+        public ImageView imageDisplay;
 
         public ViewHolder(View itemView) {
 
@@ -62,10 +89,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
             nameDisplay = itemView.findViewById(R.id.nameText);
             ownerDisplay = itemView.findViewById(R.id.ownerText);
+            playersDisplay = itemView.findViewById(R.id.playersText);
+            timeDisplay = itemView.findViewById(R.id.timeText);
+            descriptionDisplay = itemView.findViewById(R.id.descriptionText);
+            imageDisplay = itemView.findViewById(R.id.gameImage);
 
             context = itemView.getContext();
         }
     }
 
 }
-

@@ -1,7 +1,10 @@
 package com.example.bryan.cabingameslist.adapter;
 
 import android.content.Context;
+import android.support.constraint.ConstraintLayout;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +21,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     Context context;
     ArrayList<CabinGamesModel> cabinGamesModelArrayList;
+    ConstraintLayout gamesListLayout;
 
     public RecyclerAdapter(ArrayList<CabinGamesModel> cabinGamesModelArrayList) {
         super();
@@ -66,6 +70,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             Picasso.with(context).load(R.drawable.ic_launcher_background).into(holder.imageDisplay);
         }
 
+        //Setting listener for when user taps on a card
+        ConstraintLayout constraintLayout = holder.constraintLayout;
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("You selected: ", "" + cabinGamesModel.getName());
+            }
+        });
+
     }
 
     @Override
@@ -82,6 +95,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         public TextView timeDisplay;
         public TextView descriptionDisplay;
         public ImageView imageDisplay;
+        public ConstraintLayout constraintLayout;
+        public CardView cardView;
 
         public ViewHolder(View itemView) {
 
@@ -93,6 +108,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             timeDisplay = itemView.findViewById(R.id.timeText);
             descriptionDisplay = itemView.findViewById(R.id.descriptionText);
             imageDisplay = itemView.findViewById(R.id.gameImage);
+            constraintLayout = itemView.findViewById(R.id.constraintLayout);
+            cardView = itemView.findViewById(R.id.gamesListCardView);
 
             context = itemView.getContext();
         }

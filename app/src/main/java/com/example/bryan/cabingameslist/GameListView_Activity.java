@@ -18,7 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class GameListView_Activity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerAdapter adapter;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game_list_view);
 
         //Look I made a comment
         cabinGamesModelArrayList = new ArrayList<>();

@@ -23,6 +23,28 @@ public class CabinGamesModel {
     @SerializedName("imageURL")
     @Expose
     private String imageURL;
+    @SerializedName("tutorial")
+    @Expose
+    private String tutorial;
+    @SerializedName("manual")
+    @Expose
+    private String manual;
+
+    public String getTutorial() {
+        return tutorial;
+    }
+
+    public void setTutorial(String tutorial) {
+        this.tutorial = tutorial;
+    }
+
+    public String getManual() {
+        return manual;
+    }
+
+    public void setManual(String manual) {
+        this.manual = manual;
+    }
 
     public String getPlayers() {
         return players;

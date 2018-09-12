@@ -2,7 +2,6 @@ package com.example.bryan.cabingameslist.adapter;
 
 import android.content.Context;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,7 +30,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.game_list_row_item_view, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
 
         return viewHolder;
@@ -96,7 +95,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         public TextView descriptionDisplay;
         public ImageView imageDisplay;
         public ConstraintLayout constraintLayout;
-        public CardView cardView;
 
         public ViewHolder(View itemView) {
 
@@ -109,7 +107,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             descriptionDisplay = itemView.findViewById(R.id.descriptionText);
             imageDisplay = itemView.findViewById(R.id.gameImage);
             constraintLayout = itemView.findViewById(R.id.constraintLayout);
-            cardView = itemView.findViewById(R.id.gamesListCardView);
 
             context = itemView.getContext();
         }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CabinGamesList</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="manual">Manual</string>
 </resources>

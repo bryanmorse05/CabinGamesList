@@ -2,4 +2,9 @@
     <string name="app_name">CabinGamesList</string>
     <string name="tutorial">Tutorial</string>
     <string name="manual">Manual</string>
+    <string name="home_page_title">BIG BEAR CABIN CON 2018</string>
+    <string name="cabin_info">This Year\'s Cabin</string>
+    <string name="games_list">Games coming to Cabin</string>
+    <string name="cabin_videos">Previous Cabin Videos</string>
+    <string name="button_4">Not sure yet</string>
 </resources>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -30,15 +31,18 @@ public class GameDetailPage_Activity extends AppCompatActivity {
         tutorialButton = findViewById(R.id.detailTutorialButton);
         manualButton = findViewById(R.id.detailManualButton);
 
-        if (getIntent().getExtras().getString("imageURL") != null || getIntent().getExtras().getString("imageURL") != "") {
+        //Setting up and enabling the back button in the support bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if (getIntent().getExtras().getString("imageURL") != null || !"".equals(getIntent().getExtras().getString("imageURL"))) {
 
             Picasso.with(this)
                     .load(getIntent().getExtras().getString("imageURL"))
-                    .error(R.drawable.ic_launcher_background)       //Handles 404, but not null
+                    .error(R.drawable.cabin_logo_gold_for_mobile)       //Handles 404, but not null
                     .into(detailImageView);
         }
         else {
-            Picasso.with(this).load(R.drawable.ic_launcher_background).into(detailImageView);
+            Picasso.with(this).load(R.drawable.cabin_logo_gold_for_mobile).into(detailImageView);
         }
 
         detailName.setText(getIntent().getExtras().getString("name"));
@@ -48,24 +52,37 @@ public class GameDetailPage_Activity extends AppCompatActivity {
         tutorialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + getIntent().getExtras().getString("tutorial")));
-                Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://www.youtube.com/watch?v=" + getIntent().getExtras().getString("tutorial")));
-                try {
-                    startActivity(appIntent);
-                } catch (ActivityNotFoundException ex) {
-                    startActivity(webIntent);
+
+                if (!"".equals(getIntent().getExtras().getString("tutorial"))) {
+                    Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getIntent().getExtras().getString("tutorial")));
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("http://www.youtube.com/watch?v=" + getIntent().getExtras().getString("tutorial")));
+                    try {
+                        startActivity(appIntent);
+                    } catch (ActivityNotFoundException ex) {
+                        startActivity(webIntent);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"No video attached",Toast.LENGTH_LONG).show();
                 }
             }
         });
 
-        manualButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getIntent().getExtras().getString("manual")));
-                startActivity(browserIntent);
-            }
-        });
+
+            manualButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if (!"".equals(getIntent().getExtras().getString("manual"))) {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getIntent().getExtras().getString("manual")));
+                        startActivity(browserIntent);
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"No manual attached",Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
     }
 }

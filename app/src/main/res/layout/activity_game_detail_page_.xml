@@ -14,9 +14,10 @@
 
     <TextView
         android:id="@+id/detailNameText"
-        android:textSize="22sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:maxLines="2"
+        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/heroImage"
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="5"
+        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@id/detailNameText"
         android:layout_marginTop="10dp"/>
 
@@ -35,6 +37,7 @@
         android:id="@+id/detailTutorialButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/tutorial"
         app:layout_constraintTop_toBottomOf="@id/detailDescriptionText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/detailManualButton"
@@ -44,6 +47,7 @@
         android:id="@+id/detailManualButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/manual"
         app:layout_constraintTop_toBottomOf="@id/detailDescriptionText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/detailTutorialButton"

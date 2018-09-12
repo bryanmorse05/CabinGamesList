@@ -64,11 +64,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
             Picasso.with(context)
                     .load(cabinGamesModel.getImageURL())
-                    .error(R.drawable.ic_launcher_background)       //Handles 404, but not null
+                    .error(R.drawable.cabin_logo_gold_for_mobile)       //Handles 404, but not null
                     .into(holder.imageDisplay);
         }
         else {
-            Picasso.with(context).load(R.drawable.ic_launcher_background).into(holder.imageDisplay);
+            Picasso.with(context).load(R.drawable.cabin_logo_gold_for_mobile).into(holder.imageDisplay);
         }
 
         //Setting listener for when user taps on a card

@@ -61,6 +61,8 @@ public class GameListView_Activity extends AppCompatActivity {
                     cabinGamesModel.setPlayers((eventsList.get(i).getPlayers()));
                     cabinGamesModel.setTime(eventsList.get(i).getTime());
                     cabinGamesModel.setDescription(eventsList.get(i).getDescription());
+                    cabinGamesModel.setTutorial(eventsList.get(i).getTutorial());
+                    cabinGamesModel.setManual(eventsList.get(i).getManual());
 
                     //Check to see if the URL is empty.  If it is, Picasso will cause the app to crash
                     //because it does not like a null/empty field.  For whatever reason, I can't just

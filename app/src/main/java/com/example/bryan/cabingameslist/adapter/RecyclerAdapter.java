@@ -1,6 +1,7 @@
 package com.example.bryan.cabingameslist.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bryan.cabingameslist.GameDetailPage_Activity;
 import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
 import com.squareup.picasso.Picasso;
@@ -74,7 +76,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("You selected: ", "" + cabinGamesModel.getName());
+                Intent intent = new Intent(context, GameDetailPage_Activity.class);
+
+                intent.putExtra("name", cabinGamesModel.getName());
+                intent.putExtra("imageURL", cabinGamesModel.getImageURL());
+                intent.putExtra("description", cabinGamesModel.getDescription());
+                intent.putExtra("tutorial", cabinGamesModel.getTutorial());
+                intent.putExtra("manual", cabinGamesModel.getManual());
+                context.startActivity(intent);
             }
         });
 

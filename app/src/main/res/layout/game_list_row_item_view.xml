@@ -28,7 +28,8 @@
             app:layout_constraintLeft_toRightOf="@id/gameImage"
             android:textSize="12sp"
             android:layout_marginLeft="5dp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/playersText"

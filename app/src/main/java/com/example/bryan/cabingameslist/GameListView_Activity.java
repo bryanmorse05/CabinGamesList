@@ -30,10 +30,15 @@ public class GameListView_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_list_view);
 
-        //Look I made a comment
+        //Setting up and enabling the back button in the support bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Cabin Games List");
+
+
+        //Setting up the array
         cabinGamesModelArrayList = new ArrayList<>();
 
-        //more comments
+        //Setting recycler viewer to any size
         recyclerView = findViewById(R.id.RecyclerView);
         recyclerView.setHasFixedSize(false);
 

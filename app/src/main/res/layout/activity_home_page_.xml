@@ -9,9 +9,10 @@
     <ImageView
         android:id="@+id/homePageBackgroundImage"
         android:src="@drawable/cabin_title_image"
-        android:scaleType="fitXY"
+        android:scaleType="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/home_page_title"/>
 
     <TextView
         android:id="@+id/homePageTitle"
@@ -20,18 +21,20 @@
         android:textAlignment="center"
         android:textColor="@color/colorGold"
         android:textStyle="bold"
+        android:background="@color/colorRoyalBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"/>
+        />
 
     <Button
         android:id="@+id/homePageCabinInfoButton"
         android:text="@string/cabin_info"
-        android:background="@color/colorRoyalBlue"
+        android:background="@drawable/buttonshape"
         android:textColor="@color/colorGold"
+        android:textSize="14sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@id/homePageTitle"
@@ -43,8 +46,9 @@
     <Button
         android:id="@+id/homePageGamesListButton"
         android:text="@string/games_list"
-        android:background="@color/colorRoyalBlue"
+        android:background="@drawable/buttonshape"
         android:textColor="@color/colorGold"
+        android:textSize="14sp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@id/homePageTitle"
@@ -56,8 +60,10 @@
     <Button
         android:id="@+id/homePageCabinVideosButton"
         android:text="@string/cabin_videos"
-        android:background="@color/colorRoyalBlue"
+        android:background="@drawable/buttonshape"
         android:textColor="@color/colorGold"
+        android:textSize="14sp"
+        android:padding="4dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@id/homePageCabinInfoButton"
@@ -69,8 +75,10 @@
     <Button
         android:id="@+id/homePageButtonFour"
         android:text="@string/button_4"
-        android:background="@color/colorRoyalBlue"
+        android:background="@drawable/buttonshape"
         android:textColor="@color/colorGold"
+        android:textSize="14sp"
+        android:padding="4dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@id/homePageGamesListButton"

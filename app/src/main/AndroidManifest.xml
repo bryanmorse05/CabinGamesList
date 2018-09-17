@@ -6,17 +6,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/cabin_logo_gold_for_mobile"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".GameListView_Activity"
-            android:parentActivityName=".HomePage_Activity"></activity>
+            android:parentActivityName=".HomePage_Activity" />
         <activity
             android:name=".GameDetailPage_Activity"
-            android:parentActivityName=".GameListView_Activity"></activity>
+            android:parentActivityName=".GameListView_Activity" />
         <activity android:name=".HomePage_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideoPlayer_Activity"></activity>
+        <activity android:name=".VideoPlayer_Activity" />
+        <activity android:name=".VideoListView_Activity"></activity>
     </application>
 
 </manifest>

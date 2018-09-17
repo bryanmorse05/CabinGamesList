@@ -6,9 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.example.bryan.cabingameslist.adapter.RecyclerAdapter;
+import com.example.bryan.cabingameslist.adapter.GamesRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
-import com.example.bryan.cabingameslist.retrofit.RetrofitAPI;
+import com.example.bryan.cabingameslist.retrofit.RetrofitGamesAPI;
 import com.example.bryan.cabingameslist.retrofit.RetrofitInstance;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import retrofit2.Response;
 public class GameListView_Activity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    RecyclerAdapter adapter;
+    GamesRecyclerAdapter adapter;
 
     ArrayList<CabinGamesModel> cabinGamesModelArrayList;
 
@@ -42,14 +42,14 @@ public class GameListView_Activity extends AppCompatActivity {
         recyclerView = findViewById(R.id.RecyclerView);
         recyclerView.setHasFixedSize(false);
 
-        adapter = new RecyclerAdapter(cabinGamesModelArrayList);
+        adapter = new GamesRecyclerAdapter(cabinGamesModelArrayList);
         recyclerView.setAdapter(adapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        RetrofitAPI retrofitAPI = RetrofitInstance.getRetrofitInstance().create(RetrofitAPI.class);
+        RetrofitGamesAPI retrofitGamesAPI = RetrofitInstance.getRetrofitInstance().create(RetrofitGamesAPI.class);
 
-        Call<List<CabinGamesModel>> call = retrofitAPI.getEvents();
+        Call<List<CabinGamesModel>> call = retrofitGamesAPI.getEvents();
 
         call.enqueue(new Callback<List<CabinGamesModel>>() {
             @Override

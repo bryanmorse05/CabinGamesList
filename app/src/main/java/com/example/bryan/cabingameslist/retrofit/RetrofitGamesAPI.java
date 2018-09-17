@@ -7,7 +7,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface RetrofitAPI {
+public interface RetrofitGamesAPI {
 
     //The key changed after I invited others to the spreadsheet.  Be careful.  Or, it could be that
     //it changes daily.  Need to verify.

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +17,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class GamesRecyclerAdapter extends RecyclerView.Adapter<GamesRecyclerAdapter.ViewHolder> {
 
     Context context;
     ArrayList<CabinGamesModel> cabinGamesModelArrayList;
-    ConstraintLayout gamesListLayout;
 
-    public RecyclerAdapter(ArrayList<CabinGamesModel> cabinGamesModelArrayList) {
+    public GamesRecyclerAdapter(ArrayList<CabinGamesModel> cabinGamesModelArrayList) {
         super();
         this.cabinGamesModelArrayList = cabinGamesModelArrayList;
     }

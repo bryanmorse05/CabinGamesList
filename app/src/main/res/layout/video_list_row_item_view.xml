@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videoGridLayout"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@color/colorWhite"
+    android:background="@drawable/list_view_card_shape"
     android:layout_margin="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

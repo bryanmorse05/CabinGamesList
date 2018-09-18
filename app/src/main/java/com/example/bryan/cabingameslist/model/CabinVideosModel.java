@@ -13,10 +13,10 @@ public class CabinVideosModel {
     private String videoTitle;
     @SerializedName("video_id")
     @Expose
-    private String videoURL;
+    private String videoID;
     @SerializedName("picture_id")
     @Expose
-    private String pictureURL;
+    private String pictureID;
 
     public String getVideoYear() {
         return videoYear;
@@ -34,20 +34,20 @@ public class CabinVideosModel {
         this.videoTitle = videoTitle;
     }
 
-    public String getVideoURL() {
-        return videoURL;
+    public String getVideoID() {
+        return videoID;
     }
 
-    public void setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
+    public void setVideoID(String videoID) {
+        this.videoID = videoID;
     }
 
-    public String getPictureURL() {
-        return pictureURL;
+    public String getPictureID() {
+        return pictureID;
     }
 
-    public void setPictureURL(String pictureURL) {
-        this.pictureURL = pictureURL;
+    public void setPictureID(String pictureID) {
+        this.pictureID = pictureID;
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.bryan.cabingameslist.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bryan.cabingameslist.R;
+import com.example.bryan.cabingameslist.activities.VideoPlayer_Activity;
 import com.example.bryan.cabingameslist.model.CabinVideosModel;
 import com.squareup.picasso.Picasso;
 
@@ -47,10 +49,10 @@ public class VideosRecyclerAdapter extends RecyclerView.Adapter<VideosRecyclerAd
         titleText.setText(cabinVideosModel.getVideoTitle());
 
         //Set the image using Picasso
-        if (cabinVideosModel.getPictureURL() != null || cabinVideosModel.getPictureURL() != "") {
+        if (cabinVideosModel.getPictureID() != null || cabinVideosModel.getPictureID() != "") {
 
             Picasso.with(context)
-                    .load(cabinVideosModel.getPictureURL())
+                    .load(cabinVideosModel.getPictureID())
                     .error(R.drawable.cabin_logo_gold_for_mobile)       //Handles 404, but not null
                     .into(holder.groupPhotoImage);
         }
@@ -59,17 +61,19 @@ public class VideosRecyclerAdapter extends RecyclerView.Adapter<VideosRecyclerAd
         }
 
         //Setting listener for when user taps on a card
-//        ConstraintLayout constraintLayout = holder.constraintLayout;
-//        constraintLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, GameDetailPage_Activity.class);
-//
-//                intent.putExtra("name", cabinVideosModel.getName());
-//
-//                context.startActivity(intent);
-//            }
-//        });
+        ConstraintLayout constraintLayout = holder.constraintLayout;
+        constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, VideoPlayer_Activity.class);
+                intent.putExtra("year", cabinVideosModel.getVideoYear());
+                intent.putExtra("title", cabinVideosModel.getVideoTitle());
+                intent.putExtra("video_id", cabinVideosModel.getVideoID());
+
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -93,7 +97,7 @@ public class VideosRecyclerAdapter extends RecyclerView.Adapter<VideosRecyclerAd
             yearText = itemView.findViewById(R.id.videoYearText);
             titleText = itemView.findViewById(R.id.videoTitleText);
             groupPhotoImage = itemView.findViewById(R.id.videoGroupPhoto);
-            constraintLayout = itemView.findViewById(R.id.constraintLayout);
+            constraintLayout = itemView.findViewById(R.id.videoGridLayout);
 
             context = itemView.getContext();
         }

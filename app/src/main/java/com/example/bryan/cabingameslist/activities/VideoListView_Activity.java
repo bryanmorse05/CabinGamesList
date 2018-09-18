@@ -3,7 +3,6 @@ package com.example.bryan.cabingameslist.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
@@ -11,7 +10,6 @@ import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.adapter.VideosRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinVideosModel;
 import com.example.bryan.cabingameslist.retrofit.RetrofitVideosAPI;
-import com.example.bryan.cabingameslist.retrofit.RetrofitGamesInstance;
 import com.example.bryan.cabingameslist.retrofit.RetrofitVideosInstance;
 
 import java.util.ArrayList;
@@ -69,8 +67,8 @@ public class VideoListView_Activity extends AppCompatActivity {
 
                         cabinVideosModel.setVideoYear(eventsList.get(i).getVideoYear());
                         cabinVideosModel.setVideoTitle(eventsList.get(i).getVideoTitle());
-                        cabinVideosModel.setVideoURL((eventsList.get(i).getVideoURL()));
-                        cabinVideosModel.setPictureURL(eventsList.get(i).getPictureURL());
+                        cabinVideosModel.setVideoID((eventsList.get(i).getVideoID()));
+                        cabinVideosModel.setPictureID(eventsList.get(i).getPictureID());
 
                         //Check to see if the URL is empty.  If it is, Picasso will cause the app to crash
                         //because it does not like a null/empty field.  For whatever reason, I can't just
@@ -78,11 +76,11 @@ public class VideoListView_Activity extends AppCompatActivity {
                         //a different variable.  By passing "none" at least it's not empty and Picasso
                         //will use the default value in the RecyclerAdapter.
                         String storedImageURL;
-                        storedImageURL = eventsList.get(i).getPictureURL();
+                        storedImageURL = eventsList.get(i).getPictureID();
                         if (storedImageURL == null || storedImageURL == "") {
-                            cabinVideosModel.setPictureURL("none");
+                            cabinVideosModel.setPictureID("none");
                         } else {
-                            cabinVideosModel.setPictureURL(eventsList.get(i).getPictureURL());
+                            cabinVideosModel.setPictureID(eventsList.get(i).getPictureID());
                         }
 
                         cabinVideosModelArrayList.add(cabinVideosModel);

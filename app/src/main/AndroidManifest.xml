@@ -11,20 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".activities.GameListView_Activity"
             android:parentActivityName=".activities.HomePage_Activity" />
+
         <activity
             android:name=".activities.GameDetailPage_Activity"
             android:parentActivityName=".activities.GameListView_Activity" />
-        <activity android:name=".activities.HomePage_Activity">
+
+        <activity android:name=".activities.HomePage_Activity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.VideoPlayer_Activity" />
+
+        <activity android:name=".activities.VideoPlayer_Activity"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".activities.VideoListView_Activity"/>
+
         <activity android:name=".activities.VideoListView_Activity"
             android:parentActivityName=".activities.HomePage_Activity">
 

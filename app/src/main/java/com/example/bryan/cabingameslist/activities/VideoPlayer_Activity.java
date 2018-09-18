@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist;
+package com.example.bryan.cabingameslist.activities;
 
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import com.example.bryan.cabingameslist.R;
 
 public class VideoPlayer_Activity extends AppCompatActivity {
 
@@ -46,6 +48,9 @@ public class VideoPlayer_Activity extends AppCompatActivity {
 
         //Download and then play the file
         //https://www.googleapis.com/drive/v3/files/file_id?key=your_key&alt=media
+
+        //API Key
+        //AIzaSyBNk85aKtbQDxtqQ9GCviajs0Wssnl_uWg
 
         //This is to download and then play the video in a VideoPlayer
         String videoLink = "https://www.googleapis.com/drive/v3/files/1NQjbaVvQklDdRewjFLcAL0ex3Vk5NXl6?key=AIzaSyBNk85aKtbQDxtqQ9GCviajs0Wssnl_uWg&alt=media";

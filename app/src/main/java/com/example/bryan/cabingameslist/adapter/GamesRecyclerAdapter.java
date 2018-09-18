@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bryan.cabingameslist.GameDetailPage_Activity;
+import com.example.bryan.cabingameslist.activities.GameDetailPage_Activity;
 import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
 import com.squareup.picasso.Picasso;

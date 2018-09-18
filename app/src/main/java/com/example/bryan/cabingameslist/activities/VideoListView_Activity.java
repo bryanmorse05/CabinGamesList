@@ -1,11 +1,13 @@
-package com.example.bryan.cabingameslist;
+package com.example.bryan.cabingameslist.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.adapter.VideosRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinVideosModel;
 import com.example.bryan.cabingameslist.retrofit.RetrofitVideosAPI;
@@ -23,6 +25,7 @@ public class VideoListView_Activity extends AppCompatActivity {
 
     RecyclerView videosRecyclerView;
     VideosRecyclerAdapter adapter;
+    GridLayoutManager gridLayoutManager;
 
     ArrayList<CabinVideosModel> cabinVideosModelArrayList;
 
@@ -47,7 +50,9 @@ public class VideoListView_Activity extends AppCompatActivity {
         adapter = new VideosRecyclerAdapter(cabinVideosModelArrayList);
         videosRecyclerView.setAdapter(adapter);
 
-        videosRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //Setting the layout to a 2 column grid
+        gridLayoutManager = new GridLayoutManager(this, 2);
+        videosRecyclerView.setLayoutManager(gridLayoutManager);
 
         RetrofitVideosAPI retrofitVideosAPI = RetrofitVideosInstance.getRetrofitInstance().create(RetrofitVideosAPI.class);
 

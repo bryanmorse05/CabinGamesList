@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist;
+package com.example.bryan.cabingameslist.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.adapter.GamesRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
 import com.example.bryan.cabingameslist.retrofit.RetrofitGamesAPI;

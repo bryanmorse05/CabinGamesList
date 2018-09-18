@@ -44,7 +44,7 @@ public class HomePage_Activity extends AppCompatActivity {
         videosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), VideoPlayer_Activity.class);
+                Intent intent = new Intent(getApplicationContext(), VideoListView_Activity.class);
                 startActivity(intent);
             }
         });

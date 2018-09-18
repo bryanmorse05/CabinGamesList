@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.example.bryan.cabingameslist.adapter.GamesRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinGamesModel;
 import com.example.bryan.cabingameslist.retrofit.RetrofitGamesAPI;
-import com.example.bryan.cabingameslist.retrofit.RetrofitInstance;
+import com.example.bryan.cabingameslist.retrofit.RetrofitGamesInstance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public class GameListView_Activity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        RetrofitGamesAPI retrofitGamesAPI = RetrofitInstance.getRetrofitInstance().create(RetrofitGamesAPI.class);
+        RetrofitGamesAPI retrofitGamesAPI = RetrofitGamesInstance.getRetrofitInstance().create(RetrofitGamesAPI.class);
 
         Call<List<CabinGamesModel>> call = retrofitGamesAPI.getEvents();
 

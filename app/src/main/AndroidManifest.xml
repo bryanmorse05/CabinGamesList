@@ -25,7 +25,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".VideoPlayer_Activity" />
-        <activity android:name=".VideoListView_Activity"></activity>
+        <activity android:name=".VideoListView_Activity"
+            android:parentActivityName=".HomePage_Activity">
+
+        </activity>
     </application>
 
 </manifest>

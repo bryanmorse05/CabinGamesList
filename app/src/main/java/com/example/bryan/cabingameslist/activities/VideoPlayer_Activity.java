@@ -29,8 +29,8 @@ public class VideoPlayer_Activity extends AppCompatActivity {
         cabinYear = getIntent().getExtras().getString("year");
 
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setTitle(cabinYear + " " + cabinTitle);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(cabinYear + " " + cabinTitle);
 
         //Cabin 1, used as default for testing
 //        cabinVideoURL = "1NQjbaVvQklDdRewjFLcAL0ex3Vk5NXl6";

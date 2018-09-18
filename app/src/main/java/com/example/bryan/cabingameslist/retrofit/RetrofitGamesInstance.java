@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitGamesInstance {
 
     private static Retrofit retrofit;
-    private static final String BASE_URL = "https://script.googleusercontent.com/a/macros/phunware.com/";
+    private static final String BASE_URL = "https://script.googleusercontent.com/macros/";
 
     public static Retrofit getRetrofitInstance() {
 

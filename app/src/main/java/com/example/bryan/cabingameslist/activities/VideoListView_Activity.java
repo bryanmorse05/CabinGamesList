@@ -30,7 +30,7 @@ public class VideoListView_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_list_view_);
+        setContentView(R.layout.item_video_list_view_);
 
 
         //Setting up and enabling the back button in the support bar

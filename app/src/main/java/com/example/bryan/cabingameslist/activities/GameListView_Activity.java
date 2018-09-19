@@ -29,7 +29,7 @@ public class GameListView_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_list_view);
+        setContentView(R.layout.item_game_list_view);
 
         //Setting up and enabling the back button in the support bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

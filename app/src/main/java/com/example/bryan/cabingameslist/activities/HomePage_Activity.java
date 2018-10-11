@@ -11,7 +11,8 @@ import com.example.bryan.cabingameslist.R;
 
 public class HomePage_Activity extends AppCompatActivity {
 
-    Button infoButton, gamesButton, videosButton, button4;
+    Button infoButton, gamesButton, videosButton, friendsButton;
+    static final String CABIN_URL = "https://www.tripadvisor.com/VacationRentalReview-g32074-d4956340-Edgewood_Castle_15_000sf_5_star_luxury_Sleeps_24-Big_Bear_Region_California.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +24,12 @@ public class HomePage_Activity extends AppCompatActivity {
         infoButton = findViewById(R.id.homePageCabinInfoButton);
         gamesButton = findViewById(R.id.homePageGamesListButton);
         videosButton = findViewById(R.id.homePageCabinVideosButton);
-        button4 = findViewById(R.id.homePageButtonFour);
+        friendsButton = findViewById(R.id.homePageFriendsButton);
 
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vrbo.com/1273971"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(CABIN_URL));
                 startActivity(browserIntent);
             }
         });
@@ -49,7 +50,7 @@ public class HomePage_Activity extends AppCompatActivity {
             }
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
+        friendsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Do something here

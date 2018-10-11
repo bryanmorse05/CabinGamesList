@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/list_view_card_shape">
+
+    <TextView
+        android:id="@+id/friendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/friendImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/friendName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/friendCabins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/friendImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/friendMiddleText"
+        android:layout_marginEnd="5dp"/>
+
+    <TextView
+        android:id="@+id/friendMiddleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cabins_since"
+        app:layout_constraintTop_toTopOf="@id/friendCabins"
+        app:layout_constraintBottom_toBottomOf="@id/friendCabins"
+        app:layout_constraintLeft_toRightOf="@id/friendCabins"
+        app:layout_constraintRight_toLeftOf="@id/friendYears"/>
+
+    <TextView
+        android:id="@+id/friendYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/friendCabins"
+        app:layout_constraintBottom_toBottomOf="@id/friendCabins"
+        app:layout_constraintLeft_toRightOf="@id/friendMiddleText"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="5dp"/>
+
+</android.support.constraint.ConstraintLayout>

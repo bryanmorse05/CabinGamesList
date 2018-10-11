@@ -53,7 +53,8 @@ public class HomePage_Activity extends AppCompatActivity {
         friendsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Do something here
+                Intent intent = new Intent(getApplicationContext(), Friends_Activity.class);
+                startActivity(intent);
             }
         });
     }

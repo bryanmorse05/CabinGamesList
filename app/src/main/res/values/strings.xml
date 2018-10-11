@@ -7,4 +7,5 @@
     <string name="games_list">Games coming to Cabin</string>
     <string name="cabin_videos">Previous Cabin Videos</string>
     <string name="meet_friends">Meet your Friends</string>
+    <string name="cabins_since"> cabins since </string>
 </resources>

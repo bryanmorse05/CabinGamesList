@@ -9,8 +9,8 @@ import android.widget.Toast;
 import com.example.bryan.cabingameslist.R;
 import com.example.bryan.cabingameslist.adapter.VideosRecyclerAdapter;
 import com.example.bryan.cabingameslist.model.CabinVideosModel;
+import com.example.bryan.cabingameslist.retrofit.RetrofitInstance;
 import com.example.bryan.cabingameslist.retrofit.RetrofitVideosAPI;
-import com.example.bryan.cabingameslist.retrofit.RetrofitVideosInstance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class VideoListView_Activity extends AppCompatActivity {
         gridLayoutManager = new GridLayoutManager(this, 2);
         videosRecyclerView.setLayoutManager(gridLayoutManager);
 
-        RetrofitVideosAPI retrofitVideosAPI = RetrofitVideosInstance.getRetrofitInstance().create(RetrofitVideosAPI.class);
+        RetrofitVideosAPI retrofitVideosAPI = RetrofitInstance.getRetrofitInstance().create(RetrofitVideosAPI.class);
 
         Call<List<CabinVideosModel>> call = retrofitVideosAPI.getEvents();
 

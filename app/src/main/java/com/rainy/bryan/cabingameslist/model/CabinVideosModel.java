@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist.model;
+package com.rainy.bryan.cabingameslist.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

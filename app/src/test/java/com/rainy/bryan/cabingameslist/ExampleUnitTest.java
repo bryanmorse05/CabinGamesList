@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist;
+package com.rainy.bryan.cabingameslist;
 
 import org.junit.Test;
 

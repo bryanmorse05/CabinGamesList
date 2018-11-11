@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist.activities;
+package com.rainy.bryan.cabingameslist.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,11 +6,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.example.bryan.cabingameslist.R;
-import com.example.bryan.cabingameslist.adapter.GamesRecyclerAdapter;
-import com.example.bryan.cabingameslist.model.CabinGamesModel;
-import com.example.bryan.cabingameslist.retrofit.RetrofitGamesAPI;
-import com.example.bryan.cabingameslist.retrofit.RetrofitInstance;
+import com.rainy.bryan.cabingameslist.R;
+import com.rainy.bryan.cabingameslist.adapter.GamesRecyclerAdapter;
+import com.rainy.bryan.cabingameslist.model.CabinGamesModel;
+import com.rainy.bryan.cabingameslist.retrofit.RetrofitGamesAPI;
+import com.rainy.bryan.cabingameslist.retrofit.RetrofitInstance;
 
 import java.util.ArrayList;
 import java.util.List;

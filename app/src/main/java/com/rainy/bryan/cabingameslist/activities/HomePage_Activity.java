@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist.activities;
+package com.rainy.bryan.cabingameslist.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.bryan.cabingameslist.R;
+import com.rainy.bryan.cabingameslist.R;
 
 public class HomePage_Activity extends AppCompatActivity {
 

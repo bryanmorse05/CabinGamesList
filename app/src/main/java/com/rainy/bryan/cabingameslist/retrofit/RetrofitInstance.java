@@ -1,11 +1,4 @@
-package com.example.bryan.cabingameslist.retrofit;
-
-import android.util.JsonReader;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.InputStreamReader;
+package com.rainy.bryan.cabingameslist.retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -1,6 +1,6 @@
-package com.example.bryan.cabingameslist.retrofit;
+package com.rainy.bryan.cabingameslist.retrofit;
 
-import com.example.bryan.cabingameslist.model.CabinFriendsModel;
+import com.rainy.bryan.cabingameslist.model.CabinFriendsModel;
 
 import java.util.List;
 

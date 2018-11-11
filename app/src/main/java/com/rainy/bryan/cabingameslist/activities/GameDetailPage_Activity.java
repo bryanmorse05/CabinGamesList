@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist.activities;
+package com.rainy.bryan.cabingameslist.activities;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bryan.cabingameslist.R;
+import com.rainy.bryan.cabingameslist.R;
 import com.squareup.picasso.Picasso;
 
 public class GameDetailPage_Activity extends AppCompatActivity {

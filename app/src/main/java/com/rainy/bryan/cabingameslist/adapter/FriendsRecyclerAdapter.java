@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist.adapter;
+package com.rainy.bryan.cabingameslist.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bryan.cabingameslist.R;
-import com.example.bryan.cabingameslist.model.CabinFriendsModel;
+import com.rainy.bryan.cabingameslist.R;
+import com.rainy.bryan.cabingameslist.model.CabinFriendsModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

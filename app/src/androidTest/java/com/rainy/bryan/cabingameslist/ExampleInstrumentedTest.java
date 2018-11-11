@@ -1,4 +1,4 @@
-package com.example.bryan.cabingameslist;
+package com.rainy.bryan.cabingameslist;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

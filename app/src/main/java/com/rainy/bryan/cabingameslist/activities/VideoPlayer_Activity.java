@@ -1,15 +1,12 @@
-package com.example.bryan.cabingameslist.activities;
+package com.rainy.bryan.cabingameslist.activities;
 
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-import com.example.bryan.cabingameslist.R;
+import com.rainy.bryan.cabingameslist.R;
 
 public class VideoPlayer_Activity extends AppCompatActivity {
 

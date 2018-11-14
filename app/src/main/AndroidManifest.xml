@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/cabin_logo_gold_for_mobile"
+        android:icon="@mipmap/cabin_gold_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/cabin_logo_gold_for_mobile"
+        android:roundIcon="@mipmap/cabin_gold_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
